@@ -1,0 +1,185 @@
+{
+  ".META": {
+    "139785715204880": {
+      ".code": {
+        "co_argcount": 1,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 1,
+        "co_stacksize": 1,
+        "co_flags": 67,
+        "co_code": [
+          100,
+          1,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null,
+            "hey from self method"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [
+            "self"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/tests/sample_objects.py",
+        "co_name": "non_static",
+        "co_firstlineno": 55,
+        "co_lnotab": [
+          0,
+          1
+        ]
+      },
+      ".metatype": "func",
+      ".name": "non_static",
+      ".module": "tests.sample_objects",
+      ".refs": {
+        ".list": [
+          {},
+          {},
+          {},
+          {
+            ".list": [],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "139785715204736": {
+      ".code": {
+        "co_argcount": 0,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 0,
+        "co_stacksize": 1,
+        "co_flags": 67,
+        "co_code": [
+          100,
+          1,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null,
+            "hello from static method"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/tests/sample_objects.py",
+        "co_name": "static",
+        "co_firstlineno": 51,
+        "co_lnotab": [
+          0,
+          2
+        ]
+      },
+      ".metatype": "func",
+      ".name": "static",
+      ".module": "tests.sample_objects",
+      ".refs": {
+        ".list": [
+          {},
+          {},
+          {},
+          {
+            ".list": [],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "19190256": {
+      ".metatype": "class",
+      ".name": "B",
+      ".module": "tests.sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [],
+            ".collection_type": "tuple"
+          },
+          null
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "tests.sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "non_static",
+              {
+                ".metaid": "139785715204880"
+              },
+              "method"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "static",
+              {
+                ".metaid": "139785715204736"
+              },
+              "static method"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    }
+  },
+  ".OBJ": {
+    ".metaid": "19190256"
+  }
+}

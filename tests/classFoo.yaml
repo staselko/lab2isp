@@ -1,0 +1,207 @@
+.META:
+  '140546014259376':
+    .code:
+      co_argcount: 4
+      co_cellvars:
+        .collection_type: tuple
+        .list: []
+      co_code:
+      - 105
+      - 0
+      - 125
+      - 4
+      - 124
+      - 3
+      - 160
+      - 0
+      - 161
+      - 0
+      - 68
+      - 0
+      - 93
+      - 40
+      - 92
+      - 2
+      - 125
+      - 5
+      - 125
+      - 6
+      - 124
+      - 5
+      - 160
+      - 1
+      - 100
+      - 1
+      - 161
+      - 1
+      - 115
+      - 44
+      - 124
+      - 6
+      - 124
+      - 4
+      - 124
+      - 5
+      - 160
+      - 2
+      - 161
+      - 0
+      - 60
+      - 0
+      - 113
+      - 12
+      - 124
+      - 6
+      - 124
+      - 4
+      - 124
+      - 5
+      - 60
+      - 0
+      - 113
+      - 12
+      - 116
+      - 3
+      - 116
+      - 4
+      - 124
+      - 0
+      - 131
+      - 2
+      - 160
+      - 5
+      - 124
+      - 0
+      - 124
+      - 1
+      - 124
+      - 2
+      - 124
+      - 4
+      - 161
+      - 4
+      - 83
+      - 0
+      co_consts:
+        .collection_type: tuple
+        .list:
+        - null
+        - __
+      co_filename: /home/slava/Public/Testing/tests/sample_objects.py
+      co_firstlineno: 82
+      co_flags: 3
+      co_freevars:
+        .collection_type: tuple
+        .list:
+        - __class__
+      co_kwonlyargcount: 0
+      co_lnotab:
+      - 0
+      - 2
+      - 4
+      - 1
+      - 16
+      - 1
+      - 10
+      - 1
+      - 14
+      - 2
+      - 10
+      - 2
+      co_name: __new__
+      co_names:
+        .collection_type: tuple
+        .list:
+        - items
+        - startswith
+        - upper
+        - super
+        - UpperAttrMetaclass
+        - __new__
+      co_nlocals: 7
+      co_posonlyargcount: 0
+      co_stacksize: 6
+      co_varnames:
+        .collection_type: tuple
+        .list:
+        - cls
+        - clsname
+        - bases
+        - dct
+        - uppercase_attr
+        - name
+        - val
+    .defaults: null
+    .metatype: func
+    .module: tests.sample_objects
+    .name: __new__
+    .refs:
+      .collection_type: tuple
+      .list:
+      - __class__:
+          .metaid: '22373696'
+      - UpperAttrMetaclass:
+          .metaid: '22373696'
+      - super:
+          .builtin: super
+          .metatype: builtin
+      - .collection_type: set
+        .list:
+        - startswith
+        - items
+        - __new__
+        - upper
+  '22373696':
+    .class:
+      attrs:
+      - .collection_type: tuple
+        .list:
+        - __doc__
+        - null
+        - data
+      - .collection_type: tuple
+        .list:
+        - __module__
+        - tests.sample_objects
+        - data
+      - .collection_type: tuple
+        .list:
+        - __new__
+        - .metaid: '140546014259376'
+        - static method
+      mro:
+      - .collection_type: tuple
+        .list:
+        - .builtin: type
+          .metatype: builtin
+      - null
+    .metatype: class
+    .module: tests.sample_objects
+    .name: UpperAttrMetaclass
+  '22374640':
+    .class:
+      attrs:
+      - .collection_type: tuple
+        .list:
+        - BAR
+        - bip
+        - data
+      - .collection_type: tuple
+        .list:
+        - __doc__
+        - null
+        - data
+      - .collection_type: tuple
+        .list:
+        - __module__
+        - tests.sample_objects
+        - data
+      mro:
+      - .collection_type: tuple
+        .list: []
+      - .metaid: '22373696'
+    .metatype: class
+    .module: tests.sample_objects
+    .name: Foo
+.OBJ:
+  .metaid: '22374640'

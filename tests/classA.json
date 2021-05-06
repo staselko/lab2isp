@@ -1,0 +1,123 @@
+{
+  ".META": {
+    "140498932241168": {
+      ".code": {
+        "co_argcount": 1,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 1,
+        "co_stacksize": 2,
+        "co_flags": 67,
+        "co_code": [
+          100,
+          1,
+          124,
+          0,
+          95,
+          0,
+          100,
+          0,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null,
+            12
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [
+            "x"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [
+            "self"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/sample_objects.py",
+        "co_name": "__init__",
+        "co_firstlineno": 42,
+        "co_lnotab": [
+          0,
+          1
+        ]
+      },
+      ".metatype": "func",
+      ".name": "__init__",
+      ".module": "sample_objects",
+      ".refs": {
+        ".list": [
+          {},
+          {},
+          {},
+          {
+            ".list": [
+              "x"
+            ],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "18742576": {
+      ".metatype": "class",
+      ".name": "A",
+      ".module": "sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [],
+            ".collection_type": "tuple"
+          },
+          null
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__init__",
+              {
+                ".metaid": "140498932241168"
+              },
+              "method"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    }
+  },
+  ".OBJ": {
+    ".metaid": "18742576"
+  }
+}

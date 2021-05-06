@@ -1,0 +1,130 @@
+.META:
+  '140315125405152':
+    .code:
+      co_argcount: 0
+      co_cellvars:
+        .collection_type: tuple
+        .list: []
+      co_code:
+      - 100
+      - 1
+      - 83
+      - 0
+      co_consts:
+        .collection_type: tuple
+        .list:
+        - null
+        - hello from static method
+      co_filename: /home/slava/Public/Testing/tests/sample_objects.py
+      co_firstlineno: 58
+      co_flags: 67
+      co_freevars:
+        .collection_type: tuple
+        .list: []
+      co_kwonlyargcount: 0
+      co_lnotab:
+      - 0
+      - 2
+      co_name: static
+      co_names:
+        .collection_type: tuple
+        .list: []
+      co_nlocals: 0
+      co_posonlyargcount: 0
+      co_stacksize: 1
+      co_varnames:
+        .collection_type: tuple
+        .list: []
+    .defaults: null
+    .metatype: func
+    .module: tests.sample_objects
+    .name: static
+    .refs:
+      .collection_type: tuple
+      .list:
+      - {}
+      - {}
+      - {}
+      - .collection_type: set
+        .list: []
+  '140315125405296':
+    .code:
+      co_argcount: 1
+      co_cellvars:
+        .collection_type: tuple
+        .list: []
+      co_code:
+      - 100
+      - 1
+      - 83
+      - 0
+      co_consts:
+        .collection_type: tuple
+        .list:
+        - null
+        - hey from self method
+      co_filename: /home/slava/Public/Testing/tests/sample_objects.py
+      co_firstlineno: 62
+      co_flags: 67
+      co_freevars:
+        .collection_type: tuple
+        .list: []
+      co_kwonlyargcount: 0
+      co_lnotab:
+      - 0
+      - 1
+      co_name: non_static
+      co_names:
+        .collection_type: tuple
+        .list: []
+      co_nlocals: 1
+      co_posonlyargcount: 0
+      co_stacksize: 1
+      co_varnames:
+        .collection_type: tuple
+        .list:
+        - self
+    .defaults: null
+    .metatype: func
+    .module: tests.sample_objects
+    .name: non_static
+    .refs:
+      .collection_type: tuple
+      .list:
+      - {}
+      - {}
+      - {}
+      - .collection_type: set
+        .list: []
+  '25775152':
+    .class:
+      attrs:
+      - .collection_type: tuple
+        .list:
+        - __doc__
+        - null
+        - data
+      - .collection_type: tuple
+        .list:
+        - __module__
+        - tests.sample_objects
+        - data
+      - .collection_type: tuple
+        .list:
+        - non_static
+        - .metaid: '140315125405296'
+        - method
+      - .collection_type: tuple
+        .list:
+        - static
+        - .metaid: '140315125405152'
+        - static method
+      mro:
+      - .collection_type: tuple
+        .list: []
+      - null
+    .metatype: class
+    .module: tests.sample_objects
+    .name: B
+.OBJ:
+  .metaid: '25775152'

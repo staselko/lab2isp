@@ -1,0 +1,189 @@
+.META:
+  '140099485574480':
+    .code:
+      co_argcount: 1
+      co_cellvars:
+        .collection_type: tuple
+        .list: []
+      co_code:
+      - 100
+      - 1
+      - 124
+      - 0
+      - 95
+      - 0
+      - 100
+      - 0
+      - 83
+      - 0
+      co_consts:
+        .collection_type: tuple
+        .list:
+        - null
+        - 12
+      co_filename: /home/slava/Public/Testing/tests/sample_objects.py
+      co_firstlineno: 49
+      co_flags: 67
+      co_freevars:
+        .collection_type: tuple
+        .list: []
+      co_kwonlyargcount: 0
+      co_lnotab:
+      - 0
+      - 1
+      co_name: __init__
+      co_names:
+        .collection_type: tuple
+        .list:
+        - x
+      co_nlocals: 1
+      co_posonlyargcount: 0
+      co_stacksize: 2
+      co_varnames:
+        .collection_type: tuple
+        .list:
+        - self
+    .defaults: null
+    .metatype: func
+    .module: tests.sample_objects
+    .name: __init__
+    .refs:
+      .collection_type: tuple
+      .list:
+      - {}
+      - {}
+      - {}
+      - .collection_type: set
+        .list:
+        - x
+  '140099485574912':
+    .code:
+      co_argcount: 2
+      co_cellvars:
+        .collection_type: tuple
+        .list: []
+      co_code:
+      - 116
+      - 0
+      - 160
+      - 1
+      - 124
+      - 0
+      - 161
+      - 1
+      - 1
+      - 0
+      - 124
+      - 1
+      - 124
+      - 0
+      - 95
+      - 2
+      - 100
+      - 0
+      - 83
+      - 0
+      co_consts:
+        .collection_type: tuple
+        .list:
+        - null
+      co_filename: /home/slava/Public/Testing/tests/sample_objects.py
+      co_firstlineno: 67
+      co_flags: 67
+      co_freevars:
+        .collection_type: tuple
+        .list: []
+      co_kwonlyargcount: 0
+      co_lnotab:
+      - 0
+      - 1
+      - 10
+      - 1
+      co_name: __init__
+      co_names:
+        .collection_type: tuple
+        .list:
+        - A
+        - __init__
+        - _prop
+      co_nlocals: 2
+      co_posonlyargcount: 0
+      co_stacksize: 3
+      co_varnames:
+        .collection_type: tuple
+        .list:
+        - self
+        - prop
+    .defaults: null
+    .metatype: func
+    .module: tests.sample_objects
+    .name: __init__
+    .refs:
+      .collection_type: tuple
+      .list:
+      - {}
+      - A:
+          .metaid: '44046464'
+      - {}
+      - .collection_type: set
+        .list:
+        - _prop
+        - __init__
+  '44046464':
+    .class:
+      attrs:
+      - .collection_type: tuple
+        .list:
+        - __doc__
+        - null
+        - data
+      - .collection_type: tuple
+        .list:
+        - __init__
+        - .metaid: '140099485574480'
+        - method
+      - .collection_type: tuple
+        .list:
+        - __module__
+        - tests.sample_objects
+        - data
+      mro:
+      - .collection_type: tuple
+        .list: []
+      - null
+    .metatype: class
+    .module: tests.sample_objects
+    .name: A
+  '44048352':
+    .class:
+      attrs:
+      - .collection_type: tuple
+        .list:
+        - __doc__
+        - null
+        - data
+      - .collection_type: tuple
+        .list:
+        - __init__
+        - .metaid: '140099485574912'
+        - method
+      - .collection_type: tuple
+        .list:
+        - __module__
+        - tests.sample_objects
+        - data
+      - .collection_type: tuple
+        .list:
+        - prop
+        - null
+        - property
+      mro:
+      - .collection_type: tuple
+        .list:
+        - .metaid: '44046464'
+      - null
+    .metatype: class
+    .module: tests.sample_objects
+    .name: C
+.OBJ:
+  .metaid: '44048352'

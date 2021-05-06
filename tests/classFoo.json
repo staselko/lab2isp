@@ -1,0 +1,275 @@
+{
+  ".META": {
+    "139932781393232": {
+      ".code": {
+        "co_argcount": 4,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 7,
+        "co_stacksize": 6,
+        "co_flags": 3,
+        "co_code": [
+          105,
+          0,
+          125,
+          4,
+          124,
+          3,
+          160,
+          0,
+          161,
+          0,
+          68,
+          0,
+          93,
+          40,
+          92,
+          2,
+          125,
+          5,
+          125,
+          6,
+          124,
+          5,
+          160,
+          1,
+          100,
+          1,
+          161,
+          1,
+          115,
+          44,
+          124,
+          6,
+          124,
+          4,
+          124,
+          5,
+          160,
+          2,
+          161,
+          0,
+          60,
+          0,
+          113,
+          12,
+          124,
+          6,
+          124,
+          4,
+          124,
+          5,
+          60,
+          0,
+          113,
+          12,
+          116,
+          3,
+          116,
+          4,
+          124,
+          0,
+          131,
+          2,
+          160,
+          5,
+          124,
+          0,
+          124,
+          1,
+          124,
+          2,
+          124,
+          4,
+          161,
+          4,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null,
+            "__"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [
+            "items",
+            "startswith",
+            "upper",
+            "super",
+            "UpperAttrMetaclass",
+            "__new__"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [
+            "cls",
+            "clsname",
+            "bases",
+            "dct",
+            "uppercase_attr",
+            "name",
+            "val"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [
+            "__class__"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/tests/sample_objects.py",
+        "co_name": "__new__",
+        "co_firstlineno": 75,
+        "co_lnotab": [
+          0,
+          2,
+          4,
+          1,
+          16,
+          1,
+          10,
+          1,
+          14,
+          2,
+          10,
+          2
+        ]
+      },
+      ".metatype": "func",
+      ".name": "__new__",
+      ".module": "tests.sample_objects",
+      ".refs": {
+        ".list": [
+          {
+            "__class__": {
+              ".metaid": "23945584"
+            }
+          },
+          {
+            "UpperAttrMetaclass": {
+              ".metaid": "23945584"
+            }
+          },
+          {
+            "super": {
+              ".metatype": "builtin",
+              ".builtin": "super"
+            }
+          },
+          {
+            ".list": [
+              "__new__",
+              "items",
+              "upper",
+              "startswith"
+            ],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "23945584": {
+      ".metatype": "class",
+      ".name": "UpperAttrMetaclass",
+      ".module": "tests.sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [
+              {
+                ".metatype": "builtin",
+                ".builtin": "type"
+              }
+            ],
+            ".collection_type": "tuple"
+          },
+          null
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "tests.sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__new__",
+              {
+                ".metaid": "139932781393232"
+              },
+              "static method"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    },
+    "23955152": {
+      ".metatype": "class",
+      ".name": "Foo",
+      ".module": "tests.sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [],
+            ".collection_type": "tuple"
+          },
+          {
+            ".metaid": "23945584"
+          }
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "BAR",
+              "bip",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "tests.sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    }
+  },
+  ".OBJ": {
+    ".metaid": "23955152"
+  }
+}

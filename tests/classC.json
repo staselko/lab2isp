@@ -1,0 +1,273 @@
+{
+  ".META": {
+    "139621125239280": {
+      ".code": {
+        "co_argcount": 1,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 1,
+        "co_stacksize": 2,
+        "co_flags": 67,
+        "co_code": [
+          100,
+          1,
+          124,
+          0,
+          95,
+          0,
+          100,
+          0,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null,
+            12
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [
+            "x"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [
+            "self"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/tests/sample_objects.py",
+        "co_name": "__init__",
+        "co_firstlineno": 42,
+        "co_lnotab": [
+          0,
+          1
+        ]
+      },
+      ".metatype": "func",
+      ".name": "__init__",
+      ".module": "tests.sample_objects",
+      ".refs": {
+        ".list": [
+          {},
+          {},
+          {},
+          {
+            ".list": [
+              "x"
+            ],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "30496000": {
+      ".metatype": "class",
+      ".name": "A",
+      ".module": "tests.sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [],
+            ".collection_type": "tuple"
+          },
+          null
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__init__",
+              {
+                ".metaid": "139621125239280"
+              },
+              "method"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "tests.sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    },
+    "139621125239712": {
+      ".code": {
+        "co_argcount": 2,
+        "co_posonlyargcount": 0,
+        "co_kwonlyargcount": 0,
+        "co_nlocals": 2,
+        "co_stacksize": 3,
+        "co_flags": 67,
+        "co_code": [
+          116,
+          0,
+          160,
+          1,
+          124,
+          0,
+          161,
+          1,
+          1,
+          0,
+          124,
+          1,
+          124,
+          0,
+          95,
+          2,
+          100,
+          0,
+          83,
+          0
+        ],
+        "co_consts": {
+          ".list": [
+            null
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_names": {
+          ".list": [
+            "A",
+            "__init__",
+            "_prop"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_varnames": {
+          ".list": [
+            "self",
+            "prop"
+          ],
+          ".collection_type": "tuple"
+        },
+        "co_freevars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_cellvars": {
+          ".list": [],
+          ".collection_type": "tuple"
+        },
+        "co_filename": "/home/slava/Public/Testing/tests/sample_objects.py",
+        "co_name": "__init__",
+        "co_firstlineno": 60,
+        "co_lnotab": [
+          0,
+          1,
+          10,
+          1
+        ]
+      },
+      ".metatype": "func",
+      ".name": "__init__",
+      ".module": "tests.sample_objects",
+      ".refs": {
+        ".list": [
+          {},
+          {
+            "A": {
+              ".metaid": "30496000"
+            }
+          },
+          {},
+          {
+            ".list": [
+              "__init__",
+              "_prop"
+            ],
+            ".collection_type": "set"
+          }
+        ],
+        ".collection_type": "tuple"
+      },
+      ".defaults": null
+    },
+    "30545312": {
+      ".metatype": "class",
+      ".name": "C",
+      ".module": "tests.sample_objects",
+      ".class": {
+        "mro": [
+          {
+            ".list": [
+              {
+                ".metaid": "30496000"
+              }
+            ],
+            ".collection_type": "tuple"
+          },
+          null
+        ],
+        "attrs": [
+          {
+            ".list": [
+              "__doc__",
+              null,
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__init__",
+              {
+                ".metaid": "139621125239712"
+              },
+              "method"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "__module__",
+              "tests.sample_objects",
+              "data"
+            ],
+            ".collection_type": "tuple"
+          },
+          {
+            ".list": [
+              "prop",
+              {
+                ".metaid": "9426176",
+                ".fields": {}
+              },
+              "property"
+            ],
+            ".collection_type": "tuple"
+          }
+        ]
+      }
+    }
+  },
+  ".OBJ": {
+    ".metaid": "30545312"
+  }
+}
