@@ -39,12 +39,9 @@ serializer.data = wrapper_(foo)
 
 serializer.data = lambda x: print(x)
 
-serializer.dump(wrapper_, 'testj.json')
+serializer.dump(Parent._getAttreasdasd, 'testj.json')
 yserializer.dump(wrapper_, 'testj.yaml')
+pserializer.dump(wrapper_, 'testj.pkl')
+tserializer.dump(wrapper_, 'testj.toml')
 
 serializer.data = ClassA
-
-# serializer.dump(foo,'test.pkl')
-# print(serializer.dumps(wrapper_))
-# f = serializer.load('test.pkl')
-# f()

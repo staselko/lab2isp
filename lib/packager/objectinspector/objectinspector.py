@@ -2,22 +2,19 @@ import builtins
 import inspect
 import re
 
-primitives = set(
-    [
-        int,
-        float,
-        bool,
-        str
-    ])
+primitives = {int, float, bool, str}  # Сет из основных примитивных типов в питоне
 
-
-def is_magicmarked(s: str) -> bool:  
+ # С помощью регулярок, узнаем, есть ли в строке магическое выражение
+def is_magicmarked(s: str) -> bool: 
     return re.match("^__(?:\w+)__$", s) != None
 
 
+# Является ли этот объект примитивом
 def is_primitive(obj: object) -> bool: 
     return type(obj) in primitives
 
+
+# Является ли объект названием класа функции или лист кортеж сет словарь
 
 def is_basetype(obj: object) -> bool: 
     for el in primitives:
@@ -29,12 +26,12 @@ def is_basetype(obj: object) -> bool:
     return False
 
 
-def is_instance(obj): # pragma: no cover
+def is_instance(obj):  # pragma: no cover
     if not hasattr(obj, '__dict__'):
         return False
-    if inspect.isroutine(obj):
+    if inspect.isroutine(obj): # ЯВЛЯЕТСЯ ЛИ ЭТОТ ОБЪЕКТ ФУНКЦИЕЙ ИЛИ МЕТОДОМ
         return False
-    if inspect.isclass(obj):
+    if inspect.isclass(obj): # КЛАССОМ
         return False
     else:
         return True
@@ -44,27 +41,27 @@ def is_none(obj: object) -> bool:
     return obj is None
 
 
-def fetch_typereferences(cls):
+def fetch_typereferences(cls): # Функция находит кодителей и отношения между ними
     if inspect.isclass(cls):
         mro = inspect.getmro(cls)
-        metamro = inspect.getmro(type(cls))
-        metamro = tuple(cls for cls in metamro if cls not in (type, object))
+        metamro = inspect.getmro(type(cls)) # получаем родителей у типа этого объекта
+        metamro = tuple(cls for cls in metamro if cls not in (type, object)) # получаем все метаклассы этого класа
         class_bases = mro
-        if not type in mro and len(metamro) != 0: # pragma: no cover
+        if not type in mro and len(metamro) != 0:  # если в мро нет тайпа лупим все элементы класс бейзеса кроме первого и последнего потому что там ненужные штуки
             return class_bases[1:-1], metamro[0]
-        else: # pragma: no cover
+        else:  # pragma: no cover
             return class_bases[1:-1], None
 
 
-def fetch_funcreferences(func: object): # pragma: no cover
+def fetch_funcreferences(func: object):  # pragma: no cover
     if inspect.ismethod(func):
         func = func.__func__
 
-    if not inspect.isfunction(func): # pragma: no cover
+    if not inspect.isfunction(func):  # pragma: no cover
         raise TypeError("{!r} is not a Python function".format(func))
 
     code = func.__code__
-    if func.__closure__ is None: # pragma: no cover
+    if func.__closure__ is None:  # pragma: no cover
         nonlocal_vars = {}
     else:
         nonlocal_vars = {
@@ -79,7 +76,7 @@ def fetch_funcreferences(func: object): # pragma: no cover
     global_vars = {}
     builtin_vars = {}
     unbound_names = set()
-    for name in code.co_names: # pragma: no cover
+    for name in code.co_names:  # pragma: no cover
         if name in ("None", "True", "False"):
             continue
         try:
@@ -94,11 +91,12 @@ def fetch_funcreferences(func: object): # pragma: no cover
             builtin_vars, unbound_names)
 
 
-def deconstruct_class(cls):  
+def deconstruct_class(cls):
     attributes = inspect.classify_class_attrs(cls)
     deconstructed = []
     for attr in attributes:
-        if attr.defining_class == object or attr.defining_class == type or attr.name in ["__dict__", "__weakref__"]: # pragma: no cover
+        if attr.defining_class == object or attr.defining_class == type or attr.name in ["__dict__",
+                                                                                         "__weakref__"]:  # pragma: no cover
             continue
         else:
             deconstructed.append((
@@ -117,7 +115,7 @@ def deconstruct_func(func):
     return {'.name': func.__name__, '.code': code, '.references': refs, '.defaults': defaults}
 
 
-def getfields(obj): # pragma: no cover
+def getfields(obj):  # pragma: no cover
     """Try to get as much attributes as possible"""
     members = inspect.getmembers(obj)
 
@@ -133,7 +131,7 @@ def getfields(obj): # pragma: no cover
     return result
 
 
-def deconstruct_instance(obj): # pragma: no cover
+def deconstruct_instance(obj):  # pragma: no cover
     type_ = type(obj)
     fields = getfields(obj)
 

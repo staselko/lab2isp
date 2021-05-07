@@ -1,13 +1,16 @@
+import inspect
+
 class AbstractMetaclass():
+    # В этом классе создается
     @staticmethod
     def create(name, mro): # pragma: no cover
-        globals().update({el.__name__: el for el in mro[0]})
+        globals().update({el.__name__: el for el in mro[0]})  # Обновляем/дополняем содержимое словаря globals
         if len(mro[0]) != 0:
-            bases = ",".join([base.__name__ for base in mro[0]])
+            bases = ",".join([base.__name__ for base in mro[0]])  # Если длина больше нуля то создаем переменную bases, начиная с запятой, в которую загружаем данные из mro
         else:
-            bases = ""
-        exec(f"class {name}({bases}):\n\tpass")
-        metaclass = eval(f"{name}")
+            bases = "" # в противном случае инициализируем пустую строковую переменную
+        exec(f"class {name}({bases}):\n\tpass")  # запускаем через строку наши данные, переданные в функцию create
+        metaclass = eval(f"{name}")  # Создаем исполняемый класс
         return metaclass
 
 
@@ -34,14 +37,14 @@ class AbstractClass():
 
 
 def create_classbase(name, mro=None):
-    if mro[1]:
+    if mro[1]:  # Если существует второй родитель
         template = AbstractClass.create(name, mro)
     else:
         template = AbstractMetaclass.create(name, mro)
     return template
 
 
-def set_classattrs(cls, attributes=None): # pragma: no cover
+def set_classattrs(cls, attributes=None):  # устанавливаем аттрибуты класса
     if attributes:
         for el in attributes:
             if el[1] != None:
@@ -64,7 +67,7 @@ def create_class(name, mro=None, attributes=None): # pragma: no cover
         template = AbstractMetaclass.create(name, mro)
     if attributes:
         for el in attributes:
-            if el[0] == "__dict__" or el[0] == "__weakref__":
+            if el[0] == "__dict__" or el[0] == "__weakref__": # weakref - ссылка на словарь или кэш, кторый скоро удалица
                 continue
             if el[1] != None:
                 try:
@@ -79,7 +82,7 @@ def create_class(name, mro=None, attributes=None): # pragma: no cover
     return template
 
 
-def create_instance(type_, fields): # pragma: no cover
+def create_instance(type_, fields): # Создаем сущность в зависимости от типа и добавляем соотв. аттрибуты
     instance = type_.__new__(type_)
     for el in fields:
         setattr(instance, el, fields[el])
@@ -89,13 +92,13 @@ def create_instance(type_, fields): # pragma: no cover
 def cell_factory(el): # pragma: no cover
     inner = el
 
-    def _f():
+    def _f(): # задаем функцию чтобы передавать замыкание для объектов функций, передает кортеж cellov
         return el
 
-    return _f.__closure__[0]
+    return _f.__closure__[0]  # передаем первый cell
 
 
-def get_code(obj): # pragma: no cover
+def get_code(obj):  # получаем пожилой код в массив и отправляем его обязательно с переноса для дальнейшего использования
     lines = inspect.getsourcelines(obj)[0]
     tabs = 0
     for ch in lines[0]:
