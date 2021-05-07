@@ -1,0 +1,7 @@
+lib
+lib/Factory
+lib/JsonParser
+lib/YamlParser
+lib/packager
+lib/packager/creator
+lib/packager/objectinspector

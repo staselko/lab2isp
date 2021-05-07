@@ -2,7 +2,7 @@ from lib.Factory import SerializerFactory
 
 
 class Serializer:
-    def __init__(self, default_form="json"):
+    def __init__(self, default_form="PICKLE"):
         self.form = default_form
 
     def change_form(self, new_form):

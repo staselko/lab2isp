@@ -1,8 +1,11 @@
 from lib import Serializer as ser
 import json
 
-serializer = ser.Serializer()
 
+serializer = ser.Serializer("JSON")
+yserializer = ser.Serializer("Yaml")
+pserializer = ser.Serializer("PICKLE")
+tserializer = ser.Serializer("TOML")
 
 globala = "HI"
 
@@ -31,13 +34,17 @@ def foo():
 
 serializer.data = wrapper_(foo)
 
-serializer.dump("sample.json")
+# serializer.dump("sample.json")
 
 
 serializer.data = lambda x: print(x)
 
-serializer.dump("lambda.json")
+serializer.dump(wrapper_, 'testj.json')
+yserializer.dump(wrapper_, 'testj.yaml')
 
 serializer.data = ClassA
 
-serializer.dump("class_a.json")
+# serializer.dump(foo,'test.pkl')
+# print(serializer.dumps(wrapper_))
+# f = serializer.load('test.pkl')
+# f()

@@ -1,13 +1,13 @@
 from io import FileIO
 import warnings
 from typing import Any, IO
-from toml import dumps, loads
+from pickle import dumps, loads
 from lib.packager import *
 
 warnings.filterwarnings("ignore")
 
 
-class TomlParser:
+class PickleParser:
     base_dumps = dumps
     base_loads = loads
 
@@ -17,19 +17,19 @@ class TomlParser:
         else:
             packed_obj = obj
         if file:
-            with open(file, 'w') as file:
-                file.write(TomlParser.base_dumps(packed_obj))
+            with open(file, 'wb') as file:
+                file.write(PickleParser.base_dumps(packed_obj))
         else:
             raise ValueError("File transfer aborted")
 
     def dumps(self, obj: object):
         packed_obj = Packer().pack(obj)
-        return TomlParser.base_dumps(packed_obj)
+        return PickleParser.base_dumps(packed_obj)
 
     def load(self, file: object, unpack=True):
         if file:
-            with open(file, 'r') as file:
-                raw_obj = TomlParser.base_loads(file.read())
+            with open(file, 'rb') as file:
+                raw_obj = PickleParser.base_loads(file.read())
             if unpack:
                 unpacked_obj = Unpacker().unpack(raw_obj)
                 return unpacked_obj
@@ -39,6 +39,6 @@ class TomlParser:
             raise ValueError("File transfer aborted")
 
     def loads(self, json: str):
-        raw_obj = TomlParser.base_loads(json)
+        raw_obj = PickleParser.base_loads(json)
         unpacked_obj = Unpacker().unpack(raw_obj)
         return unpacked_obj

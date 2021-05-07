@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: pypackager-lib
+Version: 0.2.4
+Summary: Serializer/Deserializer
+Home-page: UNKNOWN
+Author: Me
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
