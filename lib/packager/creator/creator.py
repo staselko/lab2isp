@@ -10,7 +10,8 @@ class AbstractMetaclass():
         else:
             bases = "" # в противном случае инициализируем пустую строковую переменную
         exec(f"class {name}({bases}):\n\tpass")  # запускаем через строку наши данные, переданные в функцию create
-        metaclass = eval(f"{name}")  # Создаем исполняемый класс
+        # Создаем исполняемый класс
+        metaclass = eval(f"{name}")  
         return metaclass
 
 

@@ -4,17 +4,17 @@ import re
 
 primitives = {int, float, bool, str}  # Сет из основных примитивных типов в питоне
 
- # С помощью регулярок, узнаем, есть ли в строке магическое выражение
-def is_magicmarked(s: str) -> bool: 
+
+# С помощью регулярок, узнаем, есть ли в строке магическое выражение
+def is_magicmarked(s: str) -> bool:  
     return re.match("^__(?:\w+)__$", s) != None
 
 
-# Является ли этот объект примитивом
+ # Является ли этот объект примитивом
 def is_primitive(obj: object) -> bool: 
     return type(obj) in primitives
 
-
-# Является ли объект названием класа функции или лист кортеж сет словарь
+#Является ли объект названием класа функции или лист кортеж сет словарь
 
 def is_basetype(obj: object) -> bool: 
     for el in primitives:
