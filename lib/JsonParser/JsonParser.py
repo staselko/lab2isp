@@ -6,14 +6,18 @@ from lib.packager import *
 
 
 class JsonParser:  # pragma: no cover
+    #написали базовые операции 
     base_dumps = dumps
     base_loads = loads
-
-    def dump(self, obj: object, file: object = None, unpacked=True) -> None: 
+    #расписываем методы
+    #принимаем методы строго типа для дальнейшей работы
+    def dump(self, obj: object, file: object = None, unpacked=True) -> None:  
+        #по дефолту заходим сюда и вызывыаем метод пак из пакера
         if unpacked: 
             packed_obj = Packer().pack(obj)
         else: 
             packed_obj = obj
+        # если указан файл вызовется метод дампс
         if file:
             with open(file, 'w') as file:
                 file.write(JsonParser.base_dumps(packed_obj))
@@ -23,7 +27,7 @@ class JsonParser:  # pragma: no cover
     def dumps(self, obj: object) -> None: 
         packed_obj = Packer().pack(obj)
         return JsonParser.base_dumps(packed_obj)
-
+   # ну и тут наоборот 
     def load(self, file: object, unpack=True) -> Any: 
         if file:
             with open(file, 'r') as file:

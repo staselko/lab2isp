@@ -1,5 +1,5 @@
 from lib import Serializer as ser
-import json
+# import json
 
 
 serializer = ser.Serializer("JSON")
@@ -34,13 +34,13 @@ def foo():
 
 serializer.data = wrapper_(foo)
 
-# serializer.dump("sample.json")
+serializer.dump(wrapper_,"sample.json")
 
 
 serializer.data = lambda x: print(x)
 
 serializer.dump(Parent._getAttreasdasd, 'testj.json')
-yserializer.dump(wrapper_, 'testj.yaml')
+yserializer.dump('2313232321321213213132132132213', 'testj.yaml')
 pserializer.dump(wrapper_, 'testj.pkl')
 tserializer.dump(wrapper_, 'testj.toml')
 

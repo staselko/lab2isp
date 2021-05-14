@@ -14,7 +14,7 @@ def is_magicmarked(s: str) -> bool:
 def is_primitive(obj: object) -> bool: 
     return type(obj) in primitives
 
-#Является ли объект названием класа функции или лист кортеж сет словарь
+# Является ли объект названием класа функции или лист кортеж сет словарь
 
 def is_basetype(obj: object) -> bool: 
     for el in primitives:
@@ -41,7 +41,7 @@ def is_none(obj: object) -> bool:
     return obj is None
 
 
-def fetch_typereferences(cls): # Функция находит кодителей и отношения между ними
+def fetch_typereferences(cls): # Функция находит подителей и отношения между ними
     if inspect.isclass(cls):
         mro = inspect.getmro(cls)
         metamro = inspect.getmro(type(cls)) # получаем родителей у типа этого объекта
@@ -53,30 +53,30 @@ def fetch_typereferences(cls): # Функция находит кодителе�
             return class_bases[1:-1], None
 
 
-def fetch_funcreferences(func: object):  # pragma: no cover
-    if inspect.ismethod(func):
+def fetch_funcreferences(func: object):  # pragma: no cover #обзор функций сначала мы
+    if inspect.ismethod(func): #проверяем является ли функция методом
         func = func.__func__
 
-    if not inspect.isfunction(func):  # pragma: no cover
+    if not inspect.isfunction(func):  # проверка от обратного: валидная ли функция эта вообще
         raise TypeError("{!r} is not a Python function".format(func))
 
-    code = func.__code__
-    if func.__closure__ is None:  # pragma: no cover
+    code = func.__code__  #берем код нашего метода
+    if func.__closure__ is None:  # созаем пустой словарь если рез отрицательный 
         nonlocal_vars = {}
-    else:
-        nonlocal_vars = {
+    else:     #если же это замыкание добавляем поля в наш словарь
+        nonlocal_vars = {  
             var: cell.cell_contents
             for var, cell in zip(code.co_freevars, func.__closure__)
         }
 
     global_ns = func.__globals__
     builtin_ns = global_ns.get("__builtins__", builtins.__dict__)
-    if inspect.ismodule(builtin_ns):
+    if inspect.ismodule(builtin_ns):      # проверка на то является ли функция модулем 
         builtin_ns = builtin_ns.__dict__
-    global_vars = {}
+    global_vars = {}   # регаем поля для дальнейшей обработки
     builtin_vars = {}
     unbound_names = set()
-    for name in code.co_names:  # pragma: no cover
+    for name in code.co_names:  # здесь мы уже достаем код функции и записываем в выше перечисленные переменные
         if name in ("None", "True", "False"):
             continue
         try:
@@ -91,12 +91,14 @@ def fetch_funcreferences(func: object):  # pragma: no cover
             builtin_vars, unbound_names)
 
 
-def deconstruct_class(cls):
+#тут уже собственно идет забор? ну да забираем все поля и класса по примеру объекта и тд
+
+def deconstruct_class(cls):  
     attributes = inspect.classify_class_attrs(cls)
     deconstructed = []
     for attr in attributes:
         if attr.defining_class == object or attr.defining_class == type or attr.name in ["__dict__",
-                                                                                         "__weakref__"]:  # pragma: no cover
+                                                                                         "__weakref__"]:  
             continue
         else:
             deconstructed.append((

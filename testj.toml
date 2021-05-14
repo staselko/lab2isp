@@ -1,12 +1,12 @@
 [".OBJ"]
-".metaid" = "140187322473920"
+".metaid" = "140017440448368"
 
-[".META".140187322473920]
+[".META".140017440448368]
 ".metatype" = "func"
 ".name" = "wrapper_"
 ".module" = "__main__"
 
-[".META".140187322473920.".code"]
+[".META".140017440448368.".code"]
 co_argcount = 1
 co_posonlyargcount = 0
 co_kwonlyargcount = 0
@@ -19,34 +19,34 @@ co_name = "wrapper_"
 co_firstlineno = 26
 co_lnotab = [ 0, 1, 12, 3,]
 
-[".META".140187322473920.".refs"]
+[".META".140017440448368.".refs"]
 ".collection_type" = "tuple"
-[[".META".140187322473920.".refs".".list"]]
+[[".META".140017440448368.".refs".".list"]]
 
-[[".META".140187322473920.".refs".".list"]]
+[[".META".140017440448368.".refs".".list"]]
 
-[[".META".140187322473920.".refs".".list"]]
+[[".META".140017440448368.".refs".".list"]]
 
-[[".META".140187322473920.".refs".".list"]]
+[[".META".140017440448368.".refs".".list"]]
 ".list" = []
 ".collection_type" = "set"
 
-[".META".140187322473920.".code".co_consts]
+[".META".140017440448368.".code".co_consts]
 ".list" = [ "None", "None", "wrapper_.<locals>.wrap",]
 ".collection_type" = "tuple"
 
-[".META".140187322473920.".code".co_names]
+[".META".140017440448368.".code".co_names]
 ".list" = []
 ".collection_type" = "tuple"
 
-[".META".140187322473920.".code".co_varnames]
+[".META".140017440448368.".code".co_varnames]
 ".list" = [ "func", "wrap",]
 ".collection_type" = "tuple"
 
-[".META".140187322473920.".code".co_freevars]
+[".META".140017440448368.".code".co_freevars]
 ".list" = []
 ".collection_type" = "tuple"
 
-[".META".140187322473920.".code".co_cellvars]
+[".META".140017440448368.".code".co_cellvars]
 ".list" = [ "func",]
 ".collection_type" = "tuple"
